@@ -30,7 +30,7 @@ function generarItem(index: number) {
 const app = new Elysia()
   .get("/", () => "Hello Elysia")
   .get("/productos", () => {
-    const productos = Array.from({ length: 1 }, (_, i) => generarItem(i));
+    const productos = Array.from({ length: 50 }, (_, i) => generarItem(i));
     return productos;
   })
   .listen(5000);
